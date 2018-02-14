@@ -1,25 +1,99 @@
 body {
     text-align: center;
+    background-color: black;
+    color: white;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-rows: 50px 100px;
+  grid-template-areas:
+    "headerSize headerColor headerKey"
+    "bodySize bodyColor bodyKey";
+  grid-gap: 2px 2px;
+}
+
+.item-1 {
+  grid-area: headerSize;
+  background-color: red;
+}
+
+.item-2 {
+  grid-area: headerColor;
+  background-color: red;
+}
+
+.item-3 {
+  grid-area: headerKey;
+  background-color: red;
+}
+
+.item-4 {
+  /* display: none; */
+  grid-area: bodySize;
+  background-color: maroon;
+  /* align-self: center; */
+}
+
+.item-5 {
+  /* display: none; */
+  grid-area: bodyColor;
+  background-color: maroon;
+  align-self: stretch;
+}
+
+.item-6 {
+  /* display: none; */
+  grid-area: bodyKey;
+  background-color: maroon;
+  /* justify-self: center; */
 }
 
 h1 {
     font-family: Monoton;
     font-size: 70px;
-    margin: 0.2em;
+    margin: 0.1em;
+    color: red;
 }
 
 h2 {
-    margin: 1em 0 0.25em;
+  /* top | horizontal | bottom */
+    /* margin: 0.5em 0 0.25em; */
 }
 
-h2:first-of-type {
-    margin-top: 0.5em;
+#sizePicker {
+  font-size: 1.2em;
+}
+
+#inputWidth, #inputHeight {
+  /* height: 2em; */
+  text-align: center;
+  font-size: 1.2em;
+  border-radius: 5px;
+}
+
+#submitButton {
+  border: none;
+  font-size: 1.1em;
+  padding: 5px;
+  width: 100px;
+  margin: 5px;
+  background-color: dodgerblue;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#submitButton:hover {
+  background-color: royalblue;
 }
 
 table,
 tr,
 td {
     border: 1px solid black;
+    /* background-color: white; */
 }
 
 table {
@@ -36,5 +110,22 @@ td {
 }
 
 input[type=number] {
-    width: 6em;
+    width: 4em;
+}
+
+.cellSelected {
+  border: 2px solid black;
+}
+
+.keyList {
+  list-style: none;
+  text-align: left;
+}
+
+.keyButton {
+  font-size: 1em;
+  margin: 2px 6px 2px 6px;
+  width: 30px;
+  border: none;
+  border-radius: 3px;
 }

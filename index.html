@@ -8,23 +8,44 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Lab: Pixel Art Maker</h1>
-
-    <h2>Choose Grid Size</h2>
-    <form id="sizePicker">
-        Grid Height:
+  <h1>Lab: Pixel Art Maker</h1>
+  <div class="container">
+    <div class="item item-1"><h2><a href="#"></a>Choose Grid Size</h2></div>
+    <div class="item item-2"><h2>Pick A Color</h2></div>
+    <div class="item item-3"><h2>Keyboard shortcuts</h2></div>
+    <div class="item item-4">
+      <form id="sizePicker">
+        Height:
         <input type="number" id="inputHeight" name="height" min="1" value="1">
-        Grid Width:
+        Width:
         <input type="number" id="inputWidth" name="width" min="1" value="1">
-        <input type="submit">
-    </form>
+        <input type="submit" id="submitButton">
+      </form>
+    </div>
+    <div class="item item-5">
+      <br>
+      <br>
+      <input type="color" id="colorPicker" value="#000000">
+    </div>
+    <div class="item item-6">
+      <ul class="keyList">
+        <li>Move up & down:
+          <button class="keyButton">&#8593;</button>and<button class="keyButton">&#8595;</button> or
+          <button class="keyButton">w</button>and<button class="keyButton">s</button></li>
+        <li>Move left & right:
+          <button class="keyButton">&#8592;</button>and<button class="keyButton">&#8594;</button> or
+          <button class="keyButton">a</button>and<button class="keyButton">d</button></li>
+        <li>Paint & Clear cell: <button class="keyButton">e</button> and <button class="keyButton">q</button></li>
+      </ul>
+    </div>
+  </div>
 
-    <h2>Pick A Color</h2>
-    <input type="color" id="colorPicker">
+  <h2>Design Canvas</h2>
+  <div class = tableBox>
+    <table id="pixelCanvas" tabindex = 0></table>
+  </div>
 
-    <h2>Design Canvas</h2>
-    <table id="pixelCanvas"></table>
 
-    <script src="designs.js"></script>
+  <script src="designs.js"></script>
 </body>
 </html>
